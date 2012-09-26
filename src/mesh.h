@@ -115,7 +115,8 @@ struct TESSvertex {
 	TESSreal coords[3];  /* vertex location in 3D */
 	TESSreal s, t;       /* projection onto the sweep plane */
 	int pqHandle;   /* to allow deletion from priority queue */
-	TESSindex n;			/* to allow identiy unique vertices */
+	TESSindex n;			/* to allow identify unique vertices */
+	TESSindex idx;			/* to allow map result to original verts */
 };
 
 struct TESSface {
