@@ -36,10 +36,6 @@
 extern "C" {
 #endif
 
-#if defined( __APPLE_CC__)
-	#include <TargetConditionals.h>
-#endif
-
 enum TessWindingRule
 {
 	TESS_WINDING_ODD,
@@ -68,12 +64,7 @@ enum TessElementType
 };
 
 typedef float TESSreal;
-//note this shouldn't be defined(TARGET_OS_IPHONE) as its always defined either 0 or 1
-#if TARGET_OS_IPHONE || defined(ANDROID)
-typedef unsigned short TESSindex;
-#else
 typedef unsigned int TESSindex;
-#endif
 
 typedef struct TESStesselator TESStesselator;
 typedef struct TESSalloc TESSalloc;
